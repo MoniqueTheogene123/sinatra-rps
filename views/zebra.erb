@@ -1,13 +1,35 @@
-  "
   <h2>
    We played rock!
   </h2>
 
   <h2>
-  They played #{comp_move}!
+  They played <%= @comp_move %>!
   </h2>
 
-  <h2>
-  We #{outcome}
+<% if @outcome == "won" %>
+  <h2 style="color: green">
+  We <%= @outcome %>!
   </h2>
-  "
+  <% elsif @outcome == "lost" %>
+    <h2 style="color: red">
+      We <%= @outcome %>!
+    </h2>
+    <% else %>
+       <h2 style="color: black">
+  We <%= @outcome %>!
+  </h2>
+  <% end %>
+
+
+
+
+
+<!--   "
+ <tr>
+    We played rock!
+    <br>
+    They played #{comp_move} 
+    <br>
+    We #{outcome}!
+    </tr>
+"-->

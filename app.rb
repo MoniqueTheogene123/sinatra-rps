@@ -23,3 +23,11 @@ get("/rock") do
 
   erb(:zebra)
 end
+
+get("/paper") do
+  erb(:giraffe)
+end
+
+get("/sissors") do
+  erb(:bear)
+end

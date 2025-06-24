@@ -7,7 +7,7 @@ get("/") do
 end
 
 get("/rock") do
-  moves = ["rock", "paper", "sissors"]
+  moves = ["rock", "paper", "scissors"]
 
   @comp_move = moves.sample
   
@@ -23,7 +23,7 @@ get("/rock") do
 end
 
 get("/paper") do
-    moves = ["rock", "paper", "sissors"]
+    moves = ["rock", "paper", "scissors"]
 
   @comp_move = moves.sample
   
@@ -38,12 +38,12 @@ get("/paper") do
   erb(:giraffe)
 end
 
-get("/sissors") do
-    moves = ["rock", "paper", "sissors"]
+get("/scissors") do
+    moves = ["rock", "paper", "scissors"]
 
   @comp_move = moves.sample
   
-  if @comp_move == "sissors"
+  if @comp_move == "scissors"
     @outcome = "tied"
   elsif @comp_move == "paper"
     @outcome = "won"
